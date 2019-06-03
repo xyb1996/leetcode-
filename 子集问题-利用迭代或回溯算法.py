@@ -8,15 +8,18 @@ class Solution:
 			res = res+[temp+[i] for temp in res]
 
 		return res
-"""回溯算法思想:
-	回溯算法的关键就是不合适就退一步，增加约束限制条件，减少复杂度。"""
+#回溯算法思想:
+	#回溯算法的关键就是不合适就退一步，增加约束限制条件，减少复杂度。
 
-	def subsets(self, nums: List[int]) -> List[List[int]]:
+
+	def subsets2(self, nums):
 		res = []
 		n = len(nums)
 
 		def helper(i,tmp):
 			res.append(tmp)
+			#注意这里的range（i,n）就是隐含的递归边界，就是当长度为n时，就不再组合起来。返回长度为2的情况
+			#继续组合。
 			for j in range(i,n):
 				helper(j+1,tmp+[nums[j]])
 
@@ -24,4 +27,4 @@ class Solution:
 		return res
 
 solution  = Solution()
-print(solution.subsets([1,2,3]))
+print(solution.subsets2([1,2,3]))
