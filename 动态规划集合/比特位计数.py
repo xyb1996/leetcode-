@@ -40,5 +40,5 @@ def count_Bit(num):
 		#否则的话，dp[i]=最高位的1+出去最高位1剩余数字中的1的个数
 		else:
 			dp.append(1+dp[i-2**k])
->>>>>>> dp
-	return dp
+
+	return dp[-1]
