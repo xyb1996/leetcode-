@@ -18,7 +18,7 @@ class Solution:
 		return result
 
 
-#下面的这种方法简直就是艺术啊
+#下面的这种方法简直就是艺术啊,递归求解。
 class Solution2:
 	def generateParenthesis(self,n):
 		result = []
@@ -29,5 +29,5 @@ class Solution2:
 		for i in range(n):
 			for left in self.generateParenthesis(i):
 				for right in self.generateParenthesis(n-1-i):
-					result.append("({})({})".format(left,right))
+					result.append("({}){}".format(left,right))
 		return result
