@@ -24,12 +24,15 @@ class Solution:
 
 		for i in range(rows):
 			for j in range(cols):
+				used.add((i, j))
 				if  board[i][j] == word[0] and  backtrace(1,i,j):
+
 					return True
+				used.remove((i,j))
 		return False
 
 solution = Solution()
 print(solution.exist([
-  ['A','A','C','E'],
-
-],"AAA"))
+	["a", "b"]]
+	,"ba"
+))
