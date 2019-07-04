@@ -33,7 +33,7 @@ class Solution:
 
 			for x,y in  [(-1,0),(1,0),(0,1),(0,-1)]:
 				temp_x,temp_y = row+x,col+y
-
+				#请看清题目中的数组是int还是'',我擦,这个地方坑了不少时间.
 				if 0<=temp_x<rows and 0<=temp_y<cols and int(grid[temp_x][temp_y]) ==1 and  not self.used[temp_x][temp_y] :
 
 					self.used[temp_x][temp_y] = True
