@@ -5,6 +5,7 @@
 
 class Solution:
 	def maxProduct(self, nums) -> int:
+		#ret保存乘积的最大子序列的结果
 		ret, up,down =nums[0],[nums[0]],[nums[0]]
 		length = len(nums)
 		for i in range(1,length):

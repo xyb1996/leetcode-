@@ -46,6 +46,7 @@ class Solution2:
 		return max(max_right, max_left, max_l + max_r)
 #3、利用动态规划，自底向上的计算最大子数组和
 class Solution:
+	#计算以i为下标结尾的最大连续子数组的值
 	def maxSubArray(self, nums):
 		n = len(nums)
 		if n == 0:

@@ -8,6 +8,7 @@ class Solution(object):
 		dp.append(0)
 
 		for i in range(1,length):
+			#如果当前数值小于之前最小值，那么最大收益一定和之前cur_max相同，用min记录minNum
 			if nums[i] <=minNum:
 				dp.append(cur_max)
 				minNum = nums[i]

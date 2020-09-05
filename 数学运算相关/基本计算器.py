@@ -41,7 +41,7 @@ class Solution:
 						j = stack_num.pop()
 						op = stack_op.pop()
 						stack_num.append(cal(j,k,op))
-
+					#最终将该运算符加入进去
 					stack_op.append(i)
 		while len(stack_op) >0:
 			k = stack_num.pop()

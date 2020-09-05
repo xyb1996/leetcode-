@@ -13,7 +13,7 @@ class Solution:
 		if  not root.left and not root.right and sum == 0:
 			return True
 		return self.hasPathSum(root.left) or self.hasPathSum(root.right)
-	def hasPathSum(self,root,sum):
+	def hasPathSum2(self,root,sum):
 		if not root:
 			return False
 		de = [(root,sum-root.val)]

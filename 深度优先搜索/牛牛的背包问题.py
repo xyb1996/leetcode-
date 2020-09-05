@@ -33,19 +33,22 @@ print(count)
 
 
 #采用下面这种递归的方式好像利用了更多的剪枝信息
+#需要利用更多的剪枝，才能优化一定的效率
 n, w = list(map(int, input().split()))
 volume = list(map(int, input().split()))
 volume.sort(reverse=True)
 
 def countNum(w,volume):
 	if w>0 and len(volume)>0:
+		#如果容量够大，每一个零食都可以装或者不装
 		if sum(volume) <= w:
 			return 2**len(volume)
 		else:
+			#可以考虑装或者不装
 			if w >= volume[0]:
 				return countNum(w-volume[0],volume[1:])+countNum(w,volume[1:])
 			else:
-				#否则找下第二大的数字进行尝试
+				#否则只能不装最大的那个，从后面的继续装找下第二大的数字进行尝试
 				return countNum(w,volume[1:])
 	else:
 		return 1

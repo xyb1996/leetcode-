@@ -22,7 +22,7 @@ class Solution:
 
 					used.remove((temp_x,temp_y))
 			return False
-#在外层等循环中，依次遍历每个点，注意每次遍历前，讲点加进去，遍历完后再恢复原本状态。
+#在外层等循环中，依次遍历每个点，注意每次遍历前，将点加进去，遍历完后再恢复原本状态。
 		for i in range(rows):
 			for j in range(cols):
 				used.add((i, j))

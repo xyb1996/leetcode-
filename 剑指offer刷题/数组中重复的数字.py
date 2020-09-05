@@ -18,6 +18,7 @@ def duplicate(nums):
 				nums[index] =nums[tmp]
 				nums[tmp] = tmp
 			else:
+				#否则就是找到了第一个重复的数字
 				return nums[index]
 
 print(duplicate([2,3,1,0,2,5,3]))

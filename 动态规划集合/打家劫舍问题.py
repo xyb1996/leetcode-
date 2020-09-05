@@ -16,7 +16,7 @@ class Solution:
             for i in range(2,length):
                 dp[i] = max(dp[i-1],dp[i-2]+nums[i])
             #return dp[-1]更简洁
-            return dp[length-1]
+            return dp[-1]
 
 solution = Solution()
 print(solution.rob([2,1,1,2]))

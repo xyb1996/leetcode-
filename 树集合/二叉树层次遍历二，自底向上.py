@@ -26,6 +26,7 @@ class Solution:
 
 		tmp = levelOrder(root)
 		length = len(tmp)
+		#层次遍历之后将遍历序列逆置得到结果
 		res=[[] for _ in range(length)]
 		for i in range(length):
 			res[i] = tmp[length-1-i]
